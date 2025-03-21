@@ -26,7 +26,12 @@ public class FlightController {
     }
 
     @GetMapping("/{id}/schedules")
-    public List<Schedule> getSchedule(@PathVariable Long id, @RequestParam LocalDate dates) {
-        return flightService.getSchedule(id, dates);
+    public List<Schedule> getSchedule(
+            @PathVariable Long id,
+            @RequestParam String dates
+    ) {
+        LocalDate parsedDate = LocalDate.parse(dates);
+        return flightService.getSchedule(id, parsedDate);
     }
+
 }
