@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Data
-@Builder(toBuilder = true)
+@Builder
 public class Schedule {
     private Long id;
     private Long flightId;

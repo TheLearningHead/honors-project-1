@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-@Builder(toBuilder = true)
+@Builder
 public class Flight {
     private Long id;
     private String airline;
